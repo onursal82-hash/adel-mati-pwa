@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Adel & Mati Game</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#E6E6FA">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Use base path for PWA and Android WebView -->
+    <base href="./">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="components.css">
+    <style>
+        body, #root {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            margin: 0;
+            background-color: #2d5a27;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #root {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        /* Loading indicator - Hidden by default */
+        #loading-indicator {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            z-index: 9999;
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
+        #error-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            max-width: 80%;
+            z-index: 10000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <div id="loading-indicator" style="display: none !important;">Loading game...</div>
+    <div id="error-message"></div>
+    
+    <!-- Load main game module -->
+    <script type="module" src="index.js"></script>
+</body>
+</html>
