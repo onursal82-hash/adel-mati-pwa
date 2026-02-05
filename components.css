@@ -1,0 +1,1546 @@
+/**
+ * Component Styles - Child-Friendly Design
+ */
+
+/* CRITICAL: Remove ALL visual boxes from images and character containers */
+img,
+img[class*="adel"],
+img[class*="mati"],
+img[class*="character"],
+img[class*="mascot"],
+img[class*="encouragement"],
+img[class*="mati-team"],
+#adel,
+#adel-image,
+#mati,
+#mati-image,
+[class*="character"],
+[class*="mascot"],
+[class*="encouragement"],
+[class*="mati-team"] {
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  outline-color: transparent !important;
+  object-fit: contain !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  /* Remove any debug borders */
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+}
+
+/* CRITICAL: Remove ALL visual boxes from character containers */
+[class*="character-container"],
+[class*="mascot-container"],
+[class*="encouragement-container"],
+[class*="mati-team-container"],
+[class*="puzzle-container"],
+div[class*="character-container"],
+div[class*="mascot-container"],
+div[class*="encouragement-container"] {
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  outline-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  /* Remove any debug borders */
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+}
+
+/* CRITICAL: Remove pseudo-elements that create boxes */
+[class*="character"]::before,
+[class*="character"]::after,
+[class*="mascot"]::before,
+[class*="mascot"]::after,
+[class*="encouragement"]::before,
+[class*="encouragement"]::after,
+[class*="mati"]::before,
+[class*="mati"]::after,
+#adel::before,
+#adel::after,
+#mati::before,
+#mati::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Login Screen */
+.login-screen {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000 !important;
+  background: transparent !important;
+  background-image: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.login-container {
+  padding: 3vh 2.5vw;
+  text-align: center;
+  min-width: min(420px, 40vw);
+  max-width: 90%;
+  border-radius: var(--border-radius-large);
+}
+
+.login-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--lavender-dark);
+  margin-bottom: 0.5vh;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+}
+
+.login-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 2vh;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
+}
+
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.adel-mascot-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* CRITICAL: Remove ALL visual boxes - zero artifacts */
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.adel-mascot-container::before,
+.adel-mascot-container::after {
+  display: none !important;
+  content: none !important;
+}
+
+.adel-mascot {
+  /* CRITICAL: Remove ALL visual boxes - zero artifacts, sits directly on lavender background */
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  
+  /* BÜYÜTÜLMÜŞ BOYUTLAR - Login ekranı için */
+  width: min(300px, 30vw) !important;
+  height: auto !important;
+  max-width: 350px;
+  max-height: min(400px, 40vh);
+  object-fit: contain !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+.adel-mascot::before,
+.adel-mascot::after {
+  display: none !important;
+  content: none !important;
+}
+  
+  /* Düzenlenmiş fotoğraflar için optimize edilmiş güçlü filtreler */
+  filter: 
+    drop-shadow(0 6px 15px rgba(177, 156, 217, 0.6))
+    drop-shadow(0 3px 8px rgba(0, 0, 0, 0.25))
+    contrast(1.35)
+    saturate(1.5)
+    brightness(1.15)
+    hue-rotate(-8deg)
+    sepia(0.1);
+  
+  mix-blend-mode: normal;
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-filter: 
+    drop-shadow(0 0 12px rgba(177, 156, 217, 0.5))
+    drop-shadow(0 0 20px rgba(177, 156, 217, 0.3))
+    contrast(1.35)
+    saturate(1.5)
+    brightness(1.15);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-input {
+  padding: 1.2rem 1.5rem;
+  font-size: 1.1rem;
+  font-family: 'Comfortaa', sans-serif;
+  color: var(--text-primary);
+  background: var(--white-soft);
+  border: 3px solid var(--lavender-light);
+  border-radius: var(--border-radius-medium);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: var(--lavender-primary);
+  box-shadow: 0 0 20px var(--lavender-glow);
+  transform: scale(1.02);
+}
+
+.login-input::placeholder {
+  color: var(--text-muted);
+}
+
+.login-button {
+  padding: 1.5vh 2.5vw;
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  font-family: 'Fredoka One', cursive;
+  font-weight: 400;
+  color: var(--white-soft);
+  background: linear-gradient(135deg, var(--lavender-primary) 0%, var(--lavender-light) 100%);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(177, 156, 217, 0.3);
+  letter-spacing: 0.5px;
+  width: 100%;
+  min-height: 5vh;
+}
+
+.login-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 25px var(--lavender-glow);
+}
+
+.login-button:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Game Screen */
+.game-screen {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh 2vw;
+  gap: 2vh;
+  background: transparent !important;
+  background-image: none !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.game-content {
+  width: 100%;
+  max-width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  gap: 2vh;
+  position: relative;
+  z-index: 50;
+  visibility: visible !important;
+  opacity: 1 !important;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+
+.timer-container {
+  align-self: flex-end;
+  padding: 1.5vh 2vw;
+  border-radius: var(--border-radius-medium);
+  position: relative;
+  z-index: 15;
+}
+
+.timer {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: var(--lavender-dark);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  letter-spacing: 2px;
+}
+
+.timer-warning {
+  color: #FF6B6B;
+  animation: pulse 0.5s infinite;
+}
+
+.question-section {
+  display: flex !important;
+  align-items: center;
+  gap: 2vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 50;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100%;
+  box-sizing: border-box;
+  /* CRITICAL: Adel's Math Academy başlığının altında kalması için margin-top */
+  margin-top: 3vh;
+}
+
+/* Game Title */
+.game-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--lavender-dark);
+  text-align: center;
+  /* CRITICAL: Timer'dan sonra, question'dan önce - question yazısını kapatmaması için */
+  margin: 1vh 0 1vh 0;
+  padding: 0.8vh 2vw;
+  /* CRITICAL: Çok belirgin ve okunabilir */
+  text-shadow: 
+    3px 3px 8px rgba(255, 255, 255, 1),
+    0 0 15px rgba(177, 156, 217, 0.8),
+    0 0 25px rgba(177, 156, 217, 0.5),
+    -2px -2px 4px rgba(255, 255, 255, 0.9);
+  letter-spacing: 3px;
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  font-weight: 700;
+  /* Arka plana yarı saydam beyaz kutu ekle */
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 4px 20px rgba(177, 156, 217, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.adel-encouragement-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 20;
+  /* CRITICAL: Remove ALL visual boxes - zero artifacts */
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  isolation: isolate;
+}
+
+.adel-encouragement-container::before,
+.adel-encouragement-container::after {
+  display: none !important;
+  content: none !important;
+}
+
+.adel-encouragement,
+#adel-image {
+  /* CRITICAL: Remove ALL visual boxes - zero artifacts, sits directly on lavender background, NO blue boxes */
+  width: min(280px, 28vw) !important;
+  height: auto !important;
+  max-width: 320px;
+  max-height: min(380px, 38vh);
+  object-fit: contain !important;
+  animation: bounce 2.5s ease-in-out infinite;
+  
+  position: relative;
+  z-index: 20;
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  outline-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  /* Remove any debug borders */
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+}
+
+.adel-encouragement::before,
+.adel-encouragement::after,
+#adel-image::before,
+#adel-image::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+  
+  /* CRITICAL: Düzenlenmiş fotoğraflar için optimize edilmiş filtreler */
+  /* Çizim/illustrasyon efekti - fotoğraf gibi görünmesini engelle */
+  /* Maksimum stilize görünüm için güçlü efektler */
+  filter: 
+    drop-shadow(0 6px 15px rgba(177, 156, 217, 0.6))
+    drop-shadow(0 3px 8px rgba(0, 0, 0, 0.25))
+    contrast(1.35)
+    saturate(1.5)
+    brightness(1.15)
+    hue-rotate(-8deg)
+    sepia(0.1);
+  
+  /* Arka planla organik blend - oyunun bir parçası gibi */
+  mix-blend-mode: normal;
+  
+  /* Yumuşak kenarlar - çizim gibi görünüm */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  
+  /* Güçlü glow efekti - oyun karakteri gibi */
+  -webkit-filter: 
+    drop-shadow(0 0 12px rgba(177, 156, 217, 0.5))
+    drop-shadow(0 0 20px rgba(177, 156, 217, 0.3))
+    contrast(1.35)
+    saturate(1.5)
+    brightness(1.15);
+  
+  /* Image'in kendisinde de border/outline olmasın */
+  -webkit-appearance: none;
+  appearance: none;
+  
+  /* Oyun karakteri gibi görünmesi için */
+  transform-style: preserve-3d;
+  will-change: transform;
+  
+  /* Ekstra stilize görünüm için */
+  opacity: 1;
+}
+
+/* CRITICAL: Remove pseudo-elements from Adel containers that create grey boxes */
+/* Moved to unified pseudo-element removal section below */
+
+.question-container {
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: var(--border-radius-medium);
+  flex: 1;
+  min-width: 300px;
+  /* CRITICAL: Başlığın arkasında kalmaması için z-index */
+  position: relative;
+  z-index: 100;
+}
+
+.question-text {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+  position: relative;
+  z-index: 15;
+}
+
+.answers-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 15;
+  visibility: visible !important;
+  opacity: 1 !important;
+  /* CRITICAL: Remove any shadow/glitch between buttons */
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.answer-button {
+  padding: 2vh 1.5vw;
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--white-soft) 0%, rgba(230, 230, 250, 0.9) 100%);
+  border: 3px solid var(--lavender-light);
+  border-radius: var(--border-radius-large);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 8vh;
+  box-shadow: 0 4px 15px rgba(177, 156, 217, 0.2);
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 15;
+  width: 100%;
+  box-sizing: border-box;
+  /* CRITICAL: Remove any shadow/glitch between buttons */
+  background-clip: padding-box;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* CRITICAL: Remove pseudo-elements that create square shadows/glitches */
+.answer-button::before,
+.answer-button::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.answer-button:hover:not(:disabled) {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 25px var(--lavender-glow);
+  border-color: var(--lavender-primary);
+  background: linear-gradient(135deg, var(--lavender-light) 0%, var(--lavender-primary) 100%);
+  color: var(--white-soft);
+}
+
+.answer-button:active:not(:disabled) {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.answer-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.answer-button.correct {
+  background: linear-gradient(135deg, #A8E6CF 0%, #7ED8B8 100%);
+  border-color: #7ED8B8;
+  color: var(--white-soft);
+}
+
+.answer-button.wrong {
+  background: linear-gradient(135deg, #FFB6C1 0%, #FF9FB3 100%);
+  border-color: #FF9FB3;
+  color: var(--white-soft);
+}
+
+.feedback {
+  padding: 1.5vh 2.5vw;
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  display: none;
+  border-radius: var(--border-radius-medium);
+  letter-spacing: 1px;
+}
+
+.feedback.correct {
+  color: #4ECB71;
+  background: rgba(168, 230, 207, 0.3);
+}
+
+.feedback.wrong {
+  color: #FF6B6B;
+  background: rgba(255, 182, 193, 0.3);
+}
+
+/* Puzzle Collection Display (permanent) */
+.puzzle-collection {
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
+  z-index: 200;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-medium);
+  padding: 1.5vh 1.5vw;
+  box-shadow: 0 4px 20px rgba(177, 156, 217, 0.3);
+  max-width: min(300px, 30vw);
+}
+
+.puzzle-collection-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: var(--lavender-dark);
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+.puzzle-pieces-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8vh;
+  justify-items: center;
+}
+
+.puzzle-collection-piece {
+  width: min(50px, 5vw);
+  height: min(50px, 5vw);
+  aspect-ratio: 1 / 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: var(--border-radius-small);
+  box-shadow: 0 2px 8px rgba(177, 156, 217, 0.3);
+  filter: drop-shadow(0 2px 6px rgba(177, 156, 217, 0.4));
+}
+
+.puzzle-piece-locked {
+  background: rgba(177, 156, 217, 0.2);
+  opacity: 0.4;
+  position: relative;
+}
+
+.puzzle-piece-locked::after {
+  content: '🔒';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+}
+
+/* Question Tracker */
+.question-tracker {
+  position: fixed !important;
+  top: 2vh !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 250 !important;
+  padding: 1.2vh 2.5vw !important;
+  font-family: 'Fredoka One', cursive !important;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem) !important;
+  /* CRITICAL: High contrast colors - Gold text */
+  color: #D4AF37 !important;
+  text-align: center !important;
+  pointer-events: none !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  /* CRITICAL: Semi-transparent dark background for visibility */
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: var(--border-radius-medium) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+  /* CRITICAL: Strong text-shadow for visibility */
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 10px rgba(212, 175, 55, 0.8),
+    0 0 20px rgba(212, 175, 55, 0.4) !important;
+  border: 2px solid rgba(212, 175, 55, 0.5) !important;
+}
+
+/* Temporary puzzle piece animation (when collected) */
+.puzzle-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 100;
+  /* CRITICAL: Hide by default, only show when piece is collected */
+  display: none;
+  /* CRITICAL: Remove ALL visual boxes */
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.puzzle-container::before,
+.puzzle-container::after {
+  display: none !important;
+  content: none !important;
+}
+
+.puzzle-container:not(:empty) {
+  display: block;
+}
+
+.puzzle-piece {
+  width: min(180px, 18vw);
+  height: min(180px, 18vw);
+  aspect-ratio: 1 / 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain !important;
+  /* CRITICAL: Remove ALL visual boxes - zero artifacts */
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  filter: drop-shadow(0 4px 15px rgba(177, 156, 217, 0.4));
+  /* NO default background image - pieces are rewards, not background elements */
+}
+
+.puzzle-piece::before,
+.puzzle-piece::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Stage Completion Screen */
+.stage-completion-screen {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999 !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  background-image: none !important;
+  pointer-events: auto !important;
+}
+
+/* CRITICAL: Hidden state for stage completion screen - COMPLETE REMOVAL */
+.stage-completion-screen.hidden,
+.hidden,
+.stage-completion-screen[style*="display: none"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  z-index: -9999 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  /* CRITICAL: Ensure it doesn't overlap with game screen */
+  clip-path: inset(100%);
+  transform: scale(0);
+}
+
+/* CRITICAL: Ensure stage completion screen children are also hidden */
+.stage-completion-screen.hidden *,
+.hidden * {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Puzzle Page Styles */
+.puzzle-page {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.puzzle-page.hidden {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  z-index: -9999 !important;
+  pointer-events: none !important;
+}
+
+.puzzle-page-wrapper {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+  position: relative !important;
+  z-index: 100000 !important;
+  pointer-events: auto !important;
+  width: 90%;
+  max-width: 800px;
+}
+
+.puzzle-page-content {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+  width: 100%;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.puzzle-page-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--lavender-dark);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.puzzle-unlock-text {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #D4AF37;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(212, 175, 55, 0.9);
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.puzzle-instruction {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-primary);
+  text-align: center;
+  margin-top: 1vh;
+}
+
+/* Interactive Puzzle Styles */
+.interactive-puzzle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+  width: 100%;
+  max-width: 600px;
+}
+
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 4px;
+  width: min(400px, 40vw);
+  height: min(400px, 40vw);
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid var(--lavender-light);
+  border-radius: var(--border-radius-medium);
+  padding: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.puzzle-grid-cell {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px dashed var(--lavender-primary);
+  border-radius: var(--border-radius-small);
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.puzzle-grid-cell:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: var(--lavender-dark);
+  transform: scale(1.05);
+}
+
+.puzzle-grid-cell.puzzle-cell-filled {
+  border: 2px solid #D4AF37;
+  background: rgba(212, 175, 55, 0.1);
+  cursor: pointer;
+}
+
+.puzzle-pieces-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5vh;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-medium);
+  backdrop-filter: blur(10px);
+}
+
+.puzzle-piece-draggable {
+  width: min(60px, 6vw);
+  height: min(60px, 6vw);
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--lavender-primary);
+  border-radius: var(--border-radius-small);
+  cursor: grab;
+  transition: all 0.3s ease;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 2px 8px rgba(177, 156, 217, 0.3);
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.puzzle-piece-draggable:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(177, 156, 217, 0.5);
+  border-color: var(--lavender-dark);
+}
+
+.puzzle-piece-draggable:active {
+  cursor: grabbing;
+  transform: scale(0.95);
+}
+
+.puzzle-complete-message {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #D4AF37;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(212, 175, 55, 0.9);
+  text-align: center;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.puzzle-complete-message.hidden {
+  display: none !important;
+}
+
+.puzzle-complete-celebration {
+  animation: goldSnap 1s ease-out;
+}
+
+.puzzle-cell-sparkle {
+  animation: sparkle 0.6s ease-out;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 0 60px rgba(212, 175, 55, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  }
+}
+
+.puzzle-complete-overlay {
+  animation: puzzleCompleteReveal 1s ease-out;
+}
+
+@keyframes puzzleCompleteReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: brightness(0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+.next-stage-button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+.next-stage-button:not(:disabled):hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 25px var(--lavender-glow);
+}
+
+.mati-character-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+  /* CRITICAL: Remove ALL visual boxes - zero artifacts */
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mati-character-container::before,
+.mati-character-container::after {
+  display: none !important;
+  content: none !important;
+}
+
+.mati-character {
+  width: min(300px, 30vw);
+  height: auto;
+  max-height: min(400px, 40vh);
+  object-fit: contain !important;
+  animation: bounce 2s ease-in-out infinite;
+  filter: drop-shadow(0 8px 25px rgba(177, 156, 217, 0.4));
+  /* CRITICAL: Remove ALL visual boxes - zero artifacts, sits directly on lavender background */
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  mix-blend-mode: multiply;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+.mati-character::before,
+.mati-character::after {
+  display: none !important;
+  content: none !important;
+}
+
+.mati-character-name {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--lavender-dark);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.puzzle-unlock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  position: relative;
+  z-index: 10001;
+}
+
+.puzzle-piece-unlock {
+  width: min(200px, 20vw);
+  height: min(200px, 20vw);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* CRITICAL: Ensure puzzle piece container doesn't show duplicate images */
+  overflow: hidden;
+}
+
+.puzzle-piece-unlock-piece {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: var(--border-radius-medium);
+}
+
+.puzzle-piece-unlocked {
+  width: 100%;
+  height: 100%;
+  min-width: min(200px, 20vw);
+  min-height: min(200px, 20vw);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: var(--border-radius-medium);
+  filter: drop-shadow(0 4px 15px rgba(177, 156, 217, 0.4));
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* CRITICAL: Ensure puzzle piece is distinct from Mati character */
+  display: block;
+  position: relative;
+}
+
+.puzzle-piece-unlocked.snap-into-place {
+  opacity: 1;
+  transform: scale(1);
+  animation: goldSnap 0.8s ease-out;
+}
+
+@keyframes goldSnap {
+  0% {
+    transform: scale(0.5) rotate(-10deg);
+    filter: drop-shadow(0 0 0 rgba(212, 175, 55, 0));
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.8));
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+  }
+}
+
+.unlock-message {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #D4AF37;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(212, 175, 55, 0.9);
+  text-align: center;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.puzzle-page-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 2vh;
+}
+
+.next-stage-button {
+  padding: 1.5vh 3.5vw;
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.2rem, 2.4vw, 1.4rem);
+  font-weight: 400;
+  color: var(--white-soft);
+  background: linear-gradient(135deg, var(--lavender-primary) 0%, var(--lavender-light) 100%);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(177, 156, 217, 0.3);
+  letter-spacing: 0.5px;
+  min-height: 5vh;
+  position: relative !important;
+  z-index: 10001 !important;
+  pointer-events: auto !important;
+}
+
+.next-stage-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 25px var(--lavender-glow);
+}
+
+.completion-wrapper {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  position: relative !important;
+  z-index: 10000 !important;
+  pointer-events: auto !important;
+}
+
+.completion-container {
+  padding: 3.5vh 3.5vw;
+  text-align: center;
+  min-width: min(550px, 55vw);
+  max-width: 90%;
+  border-radius: var(--border-radius-large);
+  position: relative !important;
+  z-index: 10000 !important;
+  pointer-events: auto !important;
+}
+
+.completion-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--lavender-dark);
+  margin-bottom: 2vh;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+}
+
+.completion-percentage {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--text-primary);
+  margin-bottom: 2vh;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.adel-mati-team-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* CRITICAL: Remove ALL visual boxes - zero artifacts */
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  isolation: isolate;
+}
+
+.adel-mati-team-container::before,
+.adel-mati-team-container::after {
+  display: none !important;
+  content: none !important;
+}
+
+.adel-mati-team {
+  /* BÜYÜTÜLMÜŞ BOYUTLAR - Stage completion için */
+  width: min(350px, 35vw);
+  height: auto;
+  max-width: 400px;
+  max-height: min(500px, 50vh);
+  object-fit: contain;
+  animation: pulse 2s ease-in-out infinite;
+  /* Düzenlenmiş fotoğraflar için optimize edilmiş görünüm */
+  filter: 
+    drop-shadow(0 6px 15px rgba(177, 156, 217, 0.6))
+    drop-shadow(0 3px 8px rgba(0, 0, 0, 0.25))
+    contrast(1.35)
+    saturate(1.5)
+    brightness(1.15)
+    hue-rotate(-8deg)
+    sepia(0.1);
+  mix-blend-mode: normal;
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-filter: 
+    drop-shadow(0 0 12px rgba(177, 156, 217, 0.5))
+    contrast(1.35)
+    saturate(1.5)
+    brightness(1.15);
+  /* CRITICAL: Arka planla blend - vesikalık foto değil */
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  mix-blend-mode: multiply;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* CRITICAL: Remove ALL pseudo-elements from character containers */
+.adel-mati-team-container::before,
+.adel-mati-team-container::after,
+.adel-mati-team::before,
+.adel-mati-team::after,
+.adel-mascot-container::before,
+.adel-mascot-container::after,
+.adel-mascot::before,
+.adel-mascot::after,
+.adel-encouragement-container::before,
+.adel-encouragement-container::after,
+.adel-encouragement::before,
+.adel-encouragement::after,
+.mati-character-container::before,
+.mati-character-container::after,
+.mati-character::before,
+.mati-character::after,
+#adel::before,
+#adel::after,
+#mati::before,
+#mati::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.continue-button {
+  padding: 1.5vh 3.5vw;
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.2rem, 2.4vw, 1.4rem);
+  font-weight: 400;
+  color: var(--white-soft);
+  background: linear-gradient(135deg, var(--lavender-primary) 0%, var(--lavender-light) 100%);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  position: relative !important;
+  z-index: 10001 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(177, 156, 217, 0.3);
+  letter-spacing: 0.5px;
+  min-height: 5vh;
+}
+
+.continue-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 25px var(--lavender-glow);
+}
+
+/* Final Celebration Screen */
+.final-celebration-screen {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  background: transparent !important;
+  background-image: none !important;
+}
+
+.celebration-container {
+  text-align: center;
+}
+
+.puzzle-final {
+  width: min(400px, 40vw);
+  height: min(400px, 40vw);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 0 50px var(--lavender-glow);
+  filter: drop-shadow(0 8px 30px rgba(177, 156, 217, 0.5));
+  margin: 0 auto 2vh;
+}
+
+.adel-mati-celebration {
+  /* BÜYÜTÜLMÜŞ BOYUTLAR - Final celebration için */
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  min-width: min(400px, 40vw);
+  min-height: min(400px, 40vw);
+  
+  /* CRITICAL: Remove ALL visual boxes - zero artifacts */
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  
+  /* Düzenlenmiş fotoğraflar için optimize edilmiş görünüm */
+  filter: 
+    drop-shadow(0 6px 15px rgba(177, 156, 217, 0.6))
+    drop-shadow(0 3px 8px rgba(0, 0, 0, 0.25))
+    contrast(1.35)
+    saturate(1.5)
+    brightness(1.15)
+    hue-rotate(-8deg)
+    sepia(0.1);
+  mix-blend-mode: normal;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.adel-mati-celebration::before,
+.adel-mati-celebration::after {
+  display: none !important;
+  content: none !important;
+}
+  -webkit-filter: 
+    drop-shadow(0 0 12px rgba(177, 156, 217, 0.5))
+    contrast(1.35)
+    saturate(1.5)
+    brightness(1.15);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* CRITICAL: Arka planla blend - vesikalık foto değil */
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  mix-blend-mode: multiply;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.congratulations-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: var(--lavender-dark);
+  margin-bottom: 1vh;
+  text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.8);
+  animation: pulse 1s infinite;
+  letter-spacing: 2px;
+}
+
+.congratulations-subtitle {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5vh;
+}
+
+.congratulations-message {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--lavender-primary);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .game-container {
+    max-width: 100vw;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .login-wrapper {
+    flex-direction: column;
+    gap: 2vh;
+  }
+  
+  .adel-mascot {
+    width: min(180px, 18vw);
+    max-height: min(300px, 30vh);
+    object-fit: contain !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  
+  .question-section {
+    flex-direction: column;
+  }
+  
+  .adel-encouragement {
+    width: min(120px, 12vw);
+    max-height: min(180px, 18vh);
+    object-fit: contain !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  
+  .completion-wrapper {
+    flex-direction: column;
+    gap: 2vh;
+  }
+  
+  .adel-mati-team {
+    width: min(200px, 20vw);
+    max-height: min(300px, 30vh);
+    object-fit: contain !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  
+  .mati-character {
+    object-fit: contain !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
